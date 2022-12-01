@@ -1,0 +1,46 @@
+<div class="bg-light">
+    <div class="container col-md-12 pb-2 pt-2" id="addKey">
+        <h3>Receive Data</h3>
+        <h6>Enable Data Sharing</h6>
+        <form id="addKeys">
+            <div class="form-group">
+                <small><strong> All fields marked with ( <span class="red"> * </span> ) are required.</strong></small>
+            </div>
+            <!-- FLeet point  -->
+            <div class="form-group">
+                <label for="fleetPoint">Fleetpoint*</label> <select required class="form-control" id="fleetPoint"
+                                                                     name="fleetPoint">
+                <option value="">Please select a fleetpoint</option>
+
+            </select>
+            </div>
+            <!-- Site  -->
+            <div class="form-group" id="showSites">
+                <label for="site">Site*</label> <select required class="form-control" id="site" name="site">
+                <option value="">Please select a site</option>
+            </select>
+            </div>
+            <!-- Key  -->
+            <div class="form-group">
+                <label for="key">Enter Key</label>
+                <input type="text"  class="form-control" max pattern=""
+                       title="Please enter the key" name="key" readonly id="key"
+                       placeholder="Please enter the key">
+                <small id="customerInstanceHelp"
+                       class="form-text text-muted">Please enter the key provided by support the instance you want to pair with.
+                    <input type="hidden" class="form-control" name="serialno" readonly id="serialno">
+                    <input type="hidden" class="form-control" name="source" readonly id="source">
+            </div>
+            <!-- Save Key Button -->
+            <button class="btn btn-primary" id="pairKey" type="button" role="button">
+                <i id="pairKey_1" class="fa fa-floppy-o" aria-hidden="true"></i> <span
+                    id="pairKey_2">Pair Keys</span>
+            </button>
+            <!-- Cancel Button -->
+            <button class="btn btn-light" id="cancelKeys" type="button" role="button">
+                <i id="cancelKeys_1" class="fa fa-ban" aria-hidden="true"></i> <span id="cancelKeys_2">Cancel</span>
+            </button>
+        </form>
+    </div>
+
+</div>

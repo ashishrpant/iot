@@ -1,0 +1,83 @@
+<style>
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        background: transparent;
+        bottom: 0;
+        color: transparent;
+        cursor: pointer;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+</style><div class="bg-light">
+    <div class=" col-md-12 pb-2 pt-2" id="addDatasharing">
+        <h3>Share Data</h3>
+        <form id="addDatasharings">
+            <div class="form-group">
+                <small><strong> All fields marked with ( <span class="red"> * </span> ) are required.</strong></small>
+            </div>
+            <!-- FLeet point  -->
+            <div class="form-group">
+                <label for="fleetPoint">Fleetpoint*</label> <select required class="form-control" id="fleetPoint"
+                                                                     name="fleetPoint">
+                <option value="">Please select a fleetpoint</option>
+            </select>
+            </div>
+            <!-- Site  -->
+            <div class="form-group" id="showSites">
+                <label for="site">Site*</label> <select required class="form-control" id="site" name="site">
+                <option value="">Please select a site</option>
+            </select>
+            </div>
+            <!-- Device  -->
+            <div class="form-group" id="showDevices">
+                <label for="site">Device*</label> <select required class="form-control" id="deviceSerial" name="deviceSerial">
+                <option value="">Please select a device</option>
+            </select>
+            </div>
+            <!-- Pick data yes/no  -->
+            <div class="form-group">
+                <label for="site">Share data <strong>INDEFINITELY?</strong></label>
+                <select required class="form-control" id="share_data" name="share_data">
+                    <option value="Forever" data-type="forever">Yes, share indefinitely</option>
+                    <option value="pickDate" data-type="pickData">No, pick an expiration date</option>
+                </select>
+            </div>
+            <!-- Expiration Date -->
+            <div class="form-group col-md-2 pl-0" id="show_date" style="display: none;">
+                <label for="expirationDate">Expiration Date</label>
+                <input type="date"  class="form-control" max pattern="[\d{1,2}/\d{1,2}/\d{4}]"
+                       title="Please use mm/dd/yyyy format" name="expirationDate" id="expirationDate"
+                       placeholder="1969-12-31" data-date-inline-picker="true">
+
+            </div>
+            <!-- Operator -->
+            <div class="form-group">
+                <label for="operator">Sharing with</label>
+                <input type="text" class="form-control" name="operator" required pattern="[a-zA-Z0-9]+" title="Special characters are not allowed"  id="operator"
+                       placeholder="Please enter destination's Operator ID">
+                <small id="operatorHelp"
+                       class="form-text text-muted">Please make sure the Operator ID is <strong>CORRECT</strong></small>
+            </div>
+            <!-- Notes -->
+            <div class="form-group">
+                <label for="note">Notes</label>
+                <input type="text" class="form-control" name="note" id="note"
+                       placeholder="Notes">
+            </div>
+
+            <!-- Save Key Button -->
+            <button class="btn btn-primary" id="saveKeys" type="button" role="button">
+                <i id="saveKeys_1" class="fa fa-floppy-o" aria-hidden="true"></i> <span
+                    id="saveKeys_2">Generate Keys</span>
+            </button>
+            <!-- Cancel Button -->
+            <button class="btn btn-light" id="cancelKeys" type="button" role="button">
+                <i id="cancelKeys_1" class="fa fa-ban" aria-hidden="true"></i> <span id="cancelKeys_2">Cancel</span>
+            </button>
+        </form>
+    </div>
+
+</div>

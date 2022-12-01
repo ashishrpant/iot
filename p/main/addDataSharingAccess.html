@@ -1,0 +1,79 @@
+<div class="bg-light">
+    <div class="container col-md-12 pb-2 pt-2" id="divAddDevice">
+        <h3>Generate Keys</h3>
+        <form id="addDevice">
+            <div class="form-group">
+                <small><strong> All fields marked with ( <span class="red"> * </span> ) are required.</strong></small>
+            </div>
+            <!-- FLeet point  -->
+            <div class="form-group">
+                <label for="fleetPoint">Fleet Point*</label> <select required class="form-control" id="fleetPoint"
+                                                                     name="fleetPoint">
+                <option value="-1">Please select fleet point</option>
+                <option value="ABC">ABC</option>
+                <option value="XYZ">XYZ</option>
+            </select>
+            </div>
+            <!-- Site  -->
+            <div class="form-group" id="showSites">
+                <label for="site">Site*</label> <select required class="form-control" id="site" name="site">
+                <option value="-1">Please select site</option>
+                <option value="1101">1101</option>
+                <option value="1102">1102</option>
+            </select>
+            </div>
+            <!-- Device  -->
+            <div class="form-group" id="showDevices">
+                <label for="site">Device*</label> <select required class="form-control" id="device" name="sdeviceite">
+                <option value="-1">Please select device</option>
+                <option value="mini827b12818">mini827b12818</option>
+                <option value="mini827b12818">mini827b12819</option>
+            </select>
+            </div>
+            <!-- Expiration Date -->
+            <div class="form-group">
+                <label for="deviceInstalledDate">Expiration Date*</label>
+                <input type="date" required class="form-control" max pattern="[\d{1,2}/\d{1,2}/\d{4}]"
+                       title="Please use mm/dd/yyyy format" name="deviceInstalledDate" id="deviceInstalledDate"
+                       placeholder="1969-12-31">
+                <small id="deviceInstalledDateHelp"
+                       class="form-text text-muted">The date this device was installed / activated.</small>
+            </div>
+            <!-- Status -->
+            <div class="form-group">
+                <label for="deviceLocation">Status</label><br>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-info active">
+                        <input type="radio" name="options" id="active" autocomplete="off" checked> Active
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" id="expired" autocomplete="off"> Expired
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" id="inactive" autocomplete="off"> Inactive
+                    </label>
+                    <label class="btn btn-info">
+                        <input type="radio" name="options" id="revoked" autocomplete="off"> Revoked
+                    </label>
+                </div>
+            </div>
+            <!-- Notes -->
+            <div class="form-group">
+                <label for="deviceLocation">Note</label>
+                <input type="text" class="form-control" name="note" id="note"
+                       placeholder="Notes">
+            </div>
+
+            <!-- Save Key Button -->
+            <button class="btn btn-primary" id="saveKeys" type="button" role="button">
+                <i id="saveKeys_1" class="fa fa-floppy-o" aria-hidden="true"></i> <span
+                    id="saveKeys_2">Generate Keys</span>
+            </button>
+            <!-- Cancel Button -->
+            <button class="btn btn-light" id="cancelKeys" type="button" role="button">
+                <i id="cancelKeys_1" class="fa fa-ban" aria-hidden="true"></i> <span id="cancelKeys_2">Cancel</span>
+            </button>
+        </form>
+    </div>
+
+</div>

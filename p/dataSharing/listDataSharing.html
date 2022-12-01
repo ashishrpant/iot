@@ -1,0 +1,69 @@
+<div class="bg-light">
+    <div class="pb-2 pt-2">
+        <div class="col">
+            <h4>Data Sharing
+
+                <button type="button" class="btn actionBlue btn-sm pull-right" id="generate_keys"><i class="fa fa-key"
+                                                                                                     id="generate_keys_1"
+                                                                                                     aria-hidden="true"></i> Share Data
+                </button>
+
+            </h4>
+            <hr/>
+        </div>
+        <div class="col" id="contentdata">
+            <nav>
+                <div class="nav nav-tabs" id="dataSharingTabs" role="tablist">
+                    <a class="nav-item nav-link active secondary_menu" id="nav-share-tab" data-toggle="tab"
+                       href="#share-data" role="tab" aria-controls="nav-home" aria-selected="true">Shared Data
+                    </a>
+                    <a class="nav-item nav-link secondary_menu" id="nav-receive-tab" data-toggle="tab"
+                       href="#receive-data" role="tab" aria-controls="nav-profile" aria-selected="false">Received Data
+                    </a>
+                    <a class="nav-item nav-link secondary_menu" id="nav-revoked-tab" data-toggle="tab"
+                       href="#revoked-data" role="tab" aria-controls="nav-revoked" aria-selected="true">Revoked
+                    </a>
+                    <a class="nav-item nav-link secondary_menu" id="nav-pending-assignment-tab" data-toggle="tab"
+                       href="#pending-data" role="tab" aria-controls="nav-pending-assignments"
+                       aria-selected="false">Pending <span id="pending_items" class="badge badge-pill badge-warning"></span>
+                    </a>
+                    <a class="nav-item nav-link secondary_menu" id="nav-expired-tab" data-toggle="tab"
+                       href="#expired-data" role="tab" aria-controls="nav-expired" aria-selected="false">Expired
+                    </a>
+                    <a class="nav-item nav-link secondary_menu " id="nav-rejected-tab" data-toggle="tab"
+                       href="#rejected-data" role="tab" aria-controls="nav-rejected" aria-selected="false">Rejected <i
+                            class="fa fa-ban" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-item nav-link secondary_menu history" id="nav-history-tab" data-toggle="tab"
+                       href="#history-data" role="tab" aria-controls="nav-history" aria-selected="false">History <i
+                            class="fa fa-exclamation" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+            </nav>
+
+            <div class="col-md-4 pull-left mt-2 mb-1 showtoggle" align="left" style="display: block;">
+                <button class="btn btn-sm btn-secondary  m-1" id="toggleonoff">
+                    <span id="toggleonoff_2">Toggle all </span> <i class="fa fa-toggle-off" aria-hidden="true"
+                                                                   id="toggleonoff_1"></i>
+                </button>
+            </div>
+            <div class="col-md-8 pull-right mt-2  mb-1" align="right">
+                <button class="btn btn-sm actionBlue m-1 revokebutton float-right " id="revoke" data-bulkrevoke="true" style="display: block;">
+                    <span data-bulkrevoke="true">Bulk Revoke </span> <i class="fa fa-ban" aria-hidden="true" data-bulkrevoke="true"></i>
+                </button>
+                <button class="btn btn-sm actionBlue m-1 float-right showtoggle renewbutton" id="renew"
+                        style="display: none;">
+                    <span>Renew </span> <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-sm btn-danger m-1 deletebutton" id="delete" style="display: none;">
+                    <span>Delete</span> <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="dataSharingLists">
+
+
+            </div>
+    </div>
+</div></div>
+

@@ -1,0 +1,55 @@
+<div id="reconfirm_dialogue" style="display: none;">
+    <div class="jumbotron pt-4 pb-4">
+        <h4 class="alert-heading ">Revoking Data Share <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <span id="totalRecord"></span> </h4>
+        <span id="totalDataSet"></span> </h4>
+        <h6>
+            <p class="pull-left">Are you sure you want to <strong>revoke</strong> the current datasharing? Please enter <strong>REVOKE</strong> in the text box below as a confirmation. </p>  <p class="text-danger pull-left">*</p>
+        </h6>
+
+        <form id="revokeDataShare">
+            <input type="text" class="form-control" id="revoke_confirmation" title="Please enter REVOKE in the text box" required>
+            <h6 class="mt-3">
+                <p class="pull-left"> Please enter your reason for revoke. </p><p class="text-danger pull-left">*</p>
+            </h6>
+            <input type="text" class="form-control mt-3 " id="revoke_confirmation_reason" title="Please enter your reason for revoke" required>
+            <h5 class="mt-4">
+                The device <span id="device_id" class="badge badge-info p-1" style="display:inline;"></span> is currently sharing data to the following device(s). Once confirmed the datasharing will be <strong>REVOKED</strong>.
+                </h5>
+            <h6 class="mt-4">
+
+                <div id="table_list" style="display: none">
+                    <table class="table table-sm table-bordered table-striped mt-2" id="revoke_list_sites">
+                        <thead>
+                            <th>
+                                Device
+                            </th>
+                            <th>
+                                Source
+                            </th>
+                            <th>
+                                Destination
+                            </th>
+                            <th>
+                                Option
+                            </th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                If you do not wish to continue or want to cancel please click <b>Cancel</b> button.
+            </h6>
+            <div class="modal-footer">
+                <button type="button" id="cancel" class="btn btn-light">
+                    <i id="cancel_1" class="fa fa-ban" aria-hidden="true"></i>
+                    <span id="cancel_2">Cancel</span></button>
+                <button type="button" id="revokedevice" class="btn btn-primary">
+                    <i id="revokedevice_1" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    <span id="revokedevice_2">Revoke</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
